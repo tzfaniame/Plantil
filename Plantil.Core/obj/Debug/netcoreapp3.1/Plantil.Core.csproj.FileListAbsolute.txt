@@ -1,0 +1,9 @@
+D:\private\projects\Plantil\Plantil.Core\obj\Debug\netcoreapp3.1\Plantil.Core.csprojAssemblyReference.cache
+D:\private\projects\Plantil\Plantil.Core\obj\Debug\netcoreapp3.1\Plantil.Core.AssemblyInfoInputs.cache
+D:\private\projects\Plantil\Plantil.Core\obj\Debug\netcoreapp3.1\Plantil.Core.AssemblyInfo.cs
+D:\private\projects\Plantil\Plantil.Core\obj\Debug\netcoreapp3.1\Plantil.Core.csproj.CoreCompileInputs.cache
+D:\private\projects\Plantil\Plantil.Core\bin\Debug\netcoreapp3.1\Plantil.Core.deps.json
+D:\private\projects\Plantil\Plantil.Core\bin\Debug\netcoreapp3.1\Plantil.Core.dll
+D:\private\projects\Plantil\Plantil.Core\bin\Debug\netcoreapp3.1\Plantil.Core.pdb
+D:\private\projects\Plantil\Plantil.Core\obj\Debug\netcoreapp3.1\Plantil.Core.dll
+D:\private\projects\Plantil\Plantil.Core\obj\Debug\netcoreapp3.1\Plantil.Core.pdb
