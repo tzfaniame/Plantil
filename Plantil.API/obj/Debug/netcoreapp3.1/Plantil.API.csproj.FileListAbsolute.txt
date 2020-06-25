@@ -50,7 +50,9 @@ D:\private\projects\Plantil\Plantil.API\bin\Debug\netcoreapp3.1\runtimes\unix\li
 D:\private\projects\Plantil\Plantil.API\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
 D:\private\projects\Plantil\Plantil.API\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
 D:\private\projects\Plantil\Plantil.API\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
-D:\private\projects\Plantil\Plantil.API\obj\Debug\netcoreapp3.1\Plantil.API.csproj.CoreCompileInputs.cache
-D:\private\projects\Plantil\Plantil.API\obj\Debug\netcoreapp3.1\Plantil.API.MvcApplicationPartsAssemblyInfo.cache
 D:\private\projects\Plantil\Plantil.API\bin\Debug\netcoreapp3.1\Plantil.Core.dll
 D:\private\projects\Plantil\Plantil.API\bin\Debug\netcoreapp3.1\Plantil.Core.pdb
+D:\private\projects\Plantil\Plantil.API\bin\Debug\netcoreapp3.1\AutoMapper.dll
+D:\private\projects\Plantil\Plantil.API\bin\Debug\netcoreapp3.1\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+D:\private\projects\Plantil\Plantil.API\obj\Debug\netcoreapp3.1\Plantil.API.csproj.CoreCompileInputs.cache
+D:\private\projects\Plantil\Plantil.API\obj\Debug\netcoreapp3.1\Plantil.API.MvcApplicationPartsAssemblyInfo.cache

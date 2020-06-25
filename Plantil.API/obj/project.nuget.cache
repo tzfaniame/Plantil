@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "t2Pdu1B1+c6iUSDROSg6LQz+EQPy+mo/qI5NVFYDgUGO56OuKyY/JEQFw7etJ4imeB0GqaDKL5K5Qv55OZBkjw==",
+  "dgSpecHash": "W0Ijn6yc5IKtTMygHNpSMVXfqS1g9NKgxf4E7+SIF+T6SFZcD+6rKEklfYu8Xv6SkOj+1NZ6Zj4HKe3nTEKWYA==",
   "success": true,
   "projectFilePath": "D:\\private\\projects\\Plantil\\Plantil.API\\Plantil.API.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\tzfania_me\\.nuget\\packages\\automapper\\9.0.0\\automapper.9.0.0.nupkg.sha512",
+    "C:\\Users\\tzfania_me\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\7.0.0\\automapper.extensions.microsoft.dependencyinjection.7.0.0.nupkg.sha512",
     "C:\\Users\\tzfania_me\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\tzfania_me\\.nuget\\packages\\microsoft.bcl.hashcode\\1.1.0\\microsoft.bcl.hashcode.1.1.0.nupkg.sha512",
     "C:\\Users\\tzfania_me\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
