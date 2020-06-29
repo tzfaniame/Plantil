@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
 using Plantil.Core;
 using System;
@@ -82,6 +83,77 @@ namespace Plantil.API.Controllers
             return NoContent();
         }
 
+        [HttpPut("{experimentId}")]
+        public ActionResult UpdateExperimentForPlant([FromRoute]Guid plantId,
+            [FromRoute] Guid experimentId , [FromBody] ExperimentForUpdateDto experiment) {
 
+            if (!_experimentRepository.PlantExists(plantId)) {
+                NotFound();
+            }
+
+            var experimentFromRepo = _experimentRepository.GetExperiment(plantId , experimentId);
+
+            if (experimentFromRepo == null) {
+                var experimentToAdd = _mapper.Map<Entities.Experiment>(experiment);
+                experimentToAdd.Id = experimentId;
+
+                _experimentRepository.AddExperiment(plantId , experimentToAdd);
+                _experimentRepository.Save();
+
+                return CreatedAtRoute("GetExperiment",
+                    new { plantId, experimentId },
+                    experimentToAdd);
+            }
+
+            //entity -> ExperimetForUpdateDto
+            //ExperimetForUpdateDto -> experiment
+            //experiment -> entity
+            _mapper.Map(experiment, experimentFromRepo);
+
+            _experimentRepository.UpdateExperiment(experimentFromRepo);
+            _experimentRepository.Save();
+
+            return NoContent();
+        }
+
+        [HttpPatch("{experimentId}")]
+        public ActionResult PartiallyUpdateExperimentForPlant(
+            Guid plantId,
+            Guid experimentId,
+            JsonPatchDocument<ExperimentForUpdateDto> patchDocument) {
+
+            if (!_experimentRepository.PlantExists(plantId)) {
+                return NotFound();
+            }
+
+            var experimentForPlantFromRepo = _experimentRepository.GetExperiment(plantId , experimentId);
+
+            if (experimentForPlantFromRepo == null) {
+                var experimentDto = new ExperimentForUpdateDto();
+                patchDocument.ApplyTo(experimentDto);
+                var experimentToAdd  = _mapper.Map<Entities.Experiment>(experimentDto);
+                experimentToAdd.Id = experimentId;
+                _experimentRepository.AddExperiment(plantId, experimentToAdd);
+                _experimentRepository.Save();
+
+                return CreatedAtRoute("GetExperiment",
+                    new { plantId, experimentId },
+                    experimentToAdd);
+            }
+
+            var experimentToPatch = _mapper.Map<ExperimentForUpdateDto>(experimentForPlantFromRepo);
+            patchDocument.ApplyTo(experimentToPatch,ModelState);
+
+            if (!TryValidateModel(experimentToPatch)) {
+                return ValidationProblem(ModelState);
+            }
+
+            _mapper.Map(experimentToPatch , experimentForPlantFromRepo);
+
+            _experimentRepository.UpdateExperiment(experimentForPlantFromRepo);
+            _experimentRepository.Save();
+
+            return NoContent();
+        }
     }
 }

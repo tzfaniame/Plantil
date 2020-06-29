@@ -7,3 +7,12 @@ D:\private\projects\Plantil\Plantil.Core\bin\Debug\netcoreapp3.1\Plantil.Core.pd
 D:\private\projects\Plantil\Plantil.Core\obj\Debug\netcoreapp3.1\Plantil.Core.dll
 D:\private\projects\Plantil\Plantil.Core\obj\Debug\netcoreapp3.1\Plantil.Core.pdb
 D:\private\projects\Plantil\Plantil.Core\obj\Debug\netcoreapp3.1\Plantil.Core.csproj.CoreCompileInputs.cache
+D:\projects\Plantil\Plantil.Core\bin\Debug\netcoreapp3.1\Plantil.Core.deps.json
+D:\projects\Plantil\Plantil.Core\bin\Debug\netcoreapp3.1\Plantil.Core.dll
+D:\projects\Plantil\Plantil.Core\bin\Debug\netcoreapp3.1\Plantil.Core.pdb
+D:\projects\Plantil\Plantil.Core\obj\Debug\netcoreapp3.1\Plantil.Core.csprojAssemblyReference.cache
+D:\projects\Plantil\Plantil.Core\obj\Debug\netcoreapp3.1\Plantil.Core.AssemblyInfoInputs.cache
+D:\projects\Plantil\Plantil.Core\obj\Debug\netcoreapp3.1\Plantil.Core.AssemblyInfo.cs
+D:\projects\Plantil\Plantil.Core\obj\Debug\netcoreapp3.1\Plantil.Core.csproj.CoreCompileInputs.cache
+D:\projects\Plantil\Plantil.Core\obj\Debug\netcoreapp3.1\Plantil.Core.dll
+D:\projects\Plantil\Plantil.Core\obj\Debug\netcoreapp3.1\Plantil.Core.pdb

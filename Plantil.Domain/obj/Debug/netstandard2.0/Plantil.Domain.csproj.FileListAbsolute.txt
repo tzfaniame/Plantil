@@ -1,0 +1,9 @@
+D:\projects\Plantil\Plantil.Domain\bin\Debug\netstandard2.0\Plantil.Domain.deps.json
+D:\projects\Plantil\Plantil.Domain\bin\Debug\netstandard2.0\Plantil.Domain.dll
+D:\projects\Plantil\Plantil.Domain\bin\Debug\netstandard2.0\Plantil.Domain.pdb
+D:\projects\Plantil\Plantil.Domain\obj\Debug\netstandard2.0\Plantil.Domain.csprojAssemblyReference.cache
+D:\projects\Plantil\Plantil.Domain\obj\Debug\netstandard2.0\Plantil.Domain.AssemblyInfoInputs.cache
+D:\projects\Plantil\Plantil.Domain\obj\Debug\netstandard2.0\Plantil.Domain.AssemblyInfo.cs
+D:\projects\Plantil\Plantil.Domain\obj\Debug\netstandard2.0\Plantil.Domain.csproj.CoreCompileInputs.cache
+D:\projects\Plantil\Plantil.Domain\obj\Debug\netstandard2.0\Plantil.Domain.dll
+D:\projects\Plantil\Plantil.Domain\obj\Debug\netstandard2.0\Plantil.Domain.pdb

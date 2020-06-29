@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\private\\projects\\Plantil\\Plantil.Core\\Plantil.Core.csproj": {}
+    "D:\\projects\\Plantil\\Plantil.Core\\Plantil.Core.csproj": {}
   },
   "projects": {
-    "D:\\private\\projects\\Plantil\\Plantil.Core\\Plantil.Core.csproj": {
+    "D:\\projects\\Plantil\\Plantil.Core\\Plantil.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\private\\projects\\Plantil\\Plantil.Core\\Plantil.Core.csproj",
+        "projectUniqueName": "D:\\projects\\Plantil\\Plantil.Core\\Plantil.Core.csproj",
         "projectName": "Plantil.Core",
-        "projectPath": "D:\\private\\projects\\Plantil\\Plantil.Core\\Plantil.Core.csproj",
-        "packagesPath": "C:\\Users\\tzfania_me\\.nuget\\packages\\",
-        "outputPath": "D:\\private\\projects\\Plantil\\Plantil.Core\\obj\\",
+        "projectPath": "D:\\projects\\Plantil\\Plantil.Core\\Plantil.Core.csproj",
+        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+        "outputPath": "D:\\projects\\Plantil\\Plantil.Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\tzfania_me\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -55,7 +55,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.300\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
         }
       }
     }

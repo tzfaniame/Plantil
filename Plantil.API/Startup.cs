@@ -13,6 +13,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Newtonsoft.Json.Serialization;
 using Plantil.API.DbContexts;
 
 namespace Plantil.API
@@ -34,16 +35,21 @@ namespace Plantil.API
                 setupAction.ReturnHttpNotAcceptable = true;
                 //setupAction.OutputFormatters.Add(
                 //    new Microsoft.AspNetCore.Mvc.Formatters.XmlDataContractSerializerOutputFormatter());
-            }).AddXmlDataContractSerializerFormatters();
+            })
+                .AddNewtonsoftJson(setupAction =>{
+                setupAction.SerializerSettings.ContractResolver =
+                new CamelCasePropertyNamesContractResolver();
+            })
+                .AddXmlDataContractSerializerFormatters();
 
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
-            services.AddScoped<IExperimentRepository,ExperimentRepository>();
+            services.AddScoped<IExperimentRepository, ExperimentRepository>();
 
             services.AddDbContext<ExperimentContext>(options =>
                {
                    options.UseSqlServer(
-                       @"Server=W10-TZFANIAM\LOCALDBV14;Database=ExperimentDB;Trusted_Connection=True;");
-            }); 
+                       @"Server=MESHULAM\SQLEXPRESS19;Database=ExperimentDB;Trusted_Connection=True;");
+               });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -53,8 +59,10 @@ namespace Plantil.API
             {
                 app.UseDeveloperExceptionPage();
             }
-            else {
-                app.UseExceptionHandler(appBuilder => {
+            else
+            {
+                app.UseExceptionHandler(appBuilder =>
+                {
                     appBuilder.Run(async context =>
                     {
                         context.Response.StatusCode = 500;

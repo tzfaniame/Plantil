@@ -13,6 +13,7 @@ namespace Plantil.API.Profiles
         {
             CreateMap<Entities.Experiment, ExperimentDto>();
             CreateMap<ExperimentForCreateDto, Entities.Experiment>();
+            CreateMap<ExperimentForUpdateDto, Entities.Experiment>().ReverseMap();
         }
     }
 }
