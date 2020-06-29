@@ -4,7 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
-namespace Plantil.API
+namespace Plantil.API.Entities
 {
 
     public class Plant

@@ -1,5 +1,4 @@
 ﻿using AutoMapper;
-using Plantil.API.Models;
 using Plantil.Core;
 using System;
 using System.Collections.Generic;
@@ -13,7 +12,7 @@ namespace Plantil.API.Profiles
     {
         public PlantsProfile()
         {
-            CreateMap<Plant, PlantDto>()
+            CreateMap<Entities.Plant, PlantDto>()
                 .ForMember(
                     dest => dest.Classification,
                     opt => opt.MapFrom(src => $"{src.Genus},{src.Family}")
@@ -22,6 +21,8 @@ namespace Plantil.API.Profiles
                     dest => dest.DaysFromPlanting,
                     opt => opt.MapFrom(src => src.PlantingDate.GetGapDays())
                 );
+
+            CreateMap<PlantForCreateDto, Entities.Plant>();
         }
     }
 }

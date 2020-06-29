@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Plantil.Core;
+using Plantil.API.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;

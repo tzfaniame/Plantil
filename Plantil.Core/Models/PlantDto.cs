@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Plantil.API.Models
+namespace Plantil.Core
 {
     public class PlantDto
     {

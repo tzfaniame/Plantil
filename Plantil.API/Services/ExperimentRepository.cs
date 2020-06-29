@@ -1,4 +1,6 @@
 ﻿using Plantil.API.DbContexts;
+using Plantil.API.Entities;
+using Plantil.Core;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,10 +10,10 @@ namespace Plantil.API
 {
     public class ExperimentRepository : IExperimentRepository, IDisposable
     {
-        private readonly ExperimentContext context;
+        private readonly ExperimentContext _context;
         public ExperimentRepository(ExperimentContext context)
         {
-            this.context = context ?? throw new ArgumentNullException(nameof(context));
+            this._context = context ?? throw new ArgumentNullException(nameof(context));
         }
 
         public void AddExperiment(Guid plantId, Experiment experiment)
@@ -27,12 +29,12 @@ namespace Plantil.API
             }
             // always set the PlantId to the passed-in plantId
             experiment.PlantId = plantId;
-            context.Experiments.Add(experiment);
+            _context.Experiments.Add(experiment);
         }
 
         public void DeleteExperiment(Experiment experiment)
         {
-            context.Experiments.Remove(experiment);
+            _context.Experiments.Remove(experiment);
         }
 
         public Experiment GetExperiment(Guid plantId, Guid experimentId)
@@ -47,7 +49,7 @@ namespace Plantil.API
                 throw new ArgumentNullException(nameof(experimentId));
             }
 
-            return context.Experiments
+            return _context.Experiments
               .Where(e => e.PlantId == plantId && e.Id == experimentId).FirstOrDefault();
         }
 
@@ -58,7 +60,7 @@ namespace Plantil.API
                 throw new ArgumentNullException(nameof(plantId));
             }
 
-            return context.Experiments
+            return _context.Experiments
                         .Where(c => c.PlantId == plantId)
                         .OrderBy(c => c.Plant.Name).ToList();
         }
@@ -83,7 +85,7 @@ namespace Plantil.API
                 experiment.Id = Guid.NewGuid();
             }
 
-            context.Plants.Add(plant);
+            _context.Plants.Add(plant);
         }
 
         public bool PlantExists(Guid plantId)
@@ -93,7 +95,7 @@ namespace Plantil.API
                 throw new ArgumentNullException(nameof(plantId));
             }
 
-            return context.Plants.Any(p => p.Id == plantId);
+            return _context.Plants.Any(p => p.Id == plantId);
         }
 
         public void DeletePlant(Plant plant)
@@ -103,7 +105,7 @@ namespace Plantil.API
                 throw new ArgumentNullException(nameof(plant));
             }
 
-            context.Plants.Remove(plant);
+            _context.Plants.Remove(plant);
         }
 
         public Plant GetPlant(Guid plantId)
@@ -113,12 +115,36 @@ namespace Plantil.API
                 throw new ArgumentNullException(nameof(plantId));
             }
 
-            return context.Plants.FirstOrDefault(p => p.Id == plantId);
+            return _context.Plants.FirstOrDefault(p => p.Id == plantId);
         }
 
         public IEnumerable<Plant> GetPlants()
         {
-            return context.Plants.ToList<Plant>();
+            return _context.Plants.ToList<Plant>();
+        }
+
+        public IEnumerable<Plant> GetPlants(PlantResourceParameters plantResParam)
+        {
+            if (plantResParam == null) {
+                throw new ArgumentNullException(nameof(plantResParam));
+            }
+
+            if (string.IsNullOrWhiteSpace(plantResParam.Genus)
+                && string.IsNullOrWhiteSpace(plantResParam.SearchQuery))
+            {
+                return GetPlants();
+            }
+
+            var collection = _context.Plants as IQueryable<Plant>;
+
+            if (!string.IsNullOrWhiteSpace(plantResParam.SearchQuery))
+            {
+                collection = collection.Where(p => p.Name.Contains(plantResParam.SearchQuery)
+                || p.Genus.Contains(plantResParam.SearchQuery) 
+                || p.Family.Contains(plantResParam.SearchQuery));
+            }
+
+            return collection;
         }
 
         public IEnumerable<Plant> GetPlants(IEnumerable<Guid> plantIds)
@@ -128,7 +154,7 @@ namespace Plantil.API
                 throw new ArgumentNullException(nameof(plantIds));
             }
 
-            return context.Plants.Where(p => plantIds.Contains(p.Id))
+            return _context.Plants.Where(p => plantIds.Contains(p.Id))
                 .OrderBy(p => p.Name)
                 .OrderBy(p => p.Genus)
                 .ToList();
@@ -141,7 +167,7 @@ namespace Plantil.API
 
         public bool Save()
         {
-            return (context.SaveChanges() >= 0);
+            return (_context.SaveChanges() >= 0);
         }
 
         public void Dispose()
@@ -157,5 +183,7 @@ namespace Plantil.API
                 // dispose resources when needed
             }
         }
+
+     
     }
 }

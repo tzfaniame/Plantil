@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Plantil.Core;
+using Plantil.API.Entities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -13,6 +15,7 @@ namespace Plantil.API
         void UpdateExperiment(Experiment experiment);
         void DeleteExperiment(Experiment experiment);
         IEnumerable<Plant> GetPlants();
+        IEnumerable<Plant> GetPlants(PlantResourceParameters plantResourceParameters);
         Plant GetPlant(Guid plantId);
         IEnumerable<Plant> GetPlants(IEnumerable<Guid> plantIds);
         void AddPlant(Plant plant);

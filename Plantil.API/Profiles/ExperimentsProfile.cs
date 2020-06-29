@@ -1,5 +1,5 @@
 ﻿using AutoMapper;
-using Plantil.API.Models;
+using Plantil.Core;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,7 +11,8 @@ namespace Plantil.API.Profiles
     {
         public ExperimentsProfile()
         {
-            CreateMap<Experiment, ExperimentDto>();
+            CreateMap<Entities.Experiment, ExperimentDto>();
+            CreateMap<ExperimentForCreateDto, Entities.Experiment>();
         }
     }
 }

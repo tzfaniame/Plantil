@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
-using Plantil.API.Models;
+using Plantil.Core;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -35,7 +35,7 @@ namespace Plantil.API.Controllers
             return Ok(experimntsDto);
         }
 
-        [HttpGet("{experimentId:guid}")]
+        [HttpGet("{experimentId:guid}",Name = "GetExperiment")]
         public ActionResult<ExperimentDto> GetExperiment(Guid plantId , Guid experimentId) {
             var experimnt = _experimentRepository.GetExperiment(plantId , experimentId);
             if (experimnt == null) {
@@ -45,6 +45,42 @@ namespace Plantil.API.Controllers
             return Ok(_mapper.Map<ExperimentDto>(experimnt));
         }
 
+        [HttpPost]
+        public ActionResult<ExperimentForCreateDto> Create(
+           Guid plantId , [FromBody]ExperimentForCreateDto experiment) {
+
+            if (!_experimentRepository.PlantExists(plantId)) {
+                return NotFound();
+            }
+
+            var experimentEntity = _mapper.Map<Entities.Experiment>(experiment);
+            _experimentRepository.AddExperiment(plantId , experimentEntity);
+            _experimentRepository.Save();
+
+            var experimentDto = _mapper.Map<ExperimentDto>(experimentEntity);
+            return CreatedAtRoute(
+                "GetExperiment" , 
+                new { plantId = plantId, experimentId = experimentDto.Id } , 
+                experimentDto);
+        }
+
+        [HttpDelete("{experimentId}")]
+        public ActionResult DeleteExperimentForPlant([FromRoute] Guid plantId , [FromRoute] Guid experimentId) {
+
+            if (!_experimentRepository.PlantExists(plantId)) {
+                return NotFound();
+            }
+
+            var experimentForPlantFromRepo = _experimentRepository.GetExperiment(plantId , experimentId);
+            if (experimentForPlantFromRepo == null) {
+                return NotFound();
+            }
+
+            _experimentRepository.DeleteExperiment(experimentForPlantFromRepo);
+            _experimentRepository.Save();
+
+            return NoContent();
+        }
 
 
     }
