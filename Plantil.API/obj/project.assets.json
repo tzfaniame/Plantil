@@ -1367,6 +1367,30 @@
         "runtime": {
           "bin/placeholder/Plantil.Core.dll": {}
         }
+      },
+      "Plantil.Data/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.0",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.SqlServer": "3.1.5",
+          "Plantil.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Plantil.Data.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Plantil.Data.dll": {}
+        }
+      },
+      "Plantil.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/Plantil.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Plantil.Domain.dll": {}
+        }
       }
     }
   },
@@ -5192,6 +5216,16 @@
       "type": "project",
       "path": "../Plantil.Core/Plantil.Core.csproj",
       "msbuildProject": "../Plantil.Core/Plantil.Core.csproj"
+    },
+    "Plantil.Data/1.0.0": {
+      "type": "project",
+      "path": "../Plantil.Data/Plantil.Data.csproj",
+      "msbuildProject": "../Plantil.Data/Plantil.Data.csproj"
+    },
+    "Plantil.Domain/1.0.0": {
+      "type": "project",
+      "path": "../Plantil.Domain/Plantil.Domain.csproj",
+      "msbuildProject": "../Plantil.Domain/Plantil.Domain.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -5202,7 +5236,9 @@
       "Microsoft.EntityFrameworkCore >= 3.1.5",
       "Microsoft.EntityFrameworkCore.SqlServer >= 3.1.5",
       "Microsoft.EntityFrameworkCore.Tools >= 3.1.5",
-      "Plantil.Core >= 1.0.0"
+      "Plantil.Core >= 1.0.0",
+      "Plantil.Data >= 1.0.0",
+      "Plantil.Domain >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -5237,6 +5273,12 @@
           "projectReferences": {
             "D:\\projects\\Plantil\\Plantil.Core\\Plantil.Core.csproj": {
               "projectPath": "D:\\projects\\Plantil\\Plantil.Core\\Plantil.Core.csproj"
+            },
+            "D:\\projects\\Plantil\\Plantil.Data\\Plantil.Data.csproj": {
+              "projectPath": "D:\\projects\\Plantil\\Plantil.Data\\Plantil.Data.csproj"
+            },
+            "D:\\projects\\Plantil\\Plantil.Domain\\Plantil.Domain.csproj": {
+              "projectPath": "D:\\projects\\Plantil\\Plantil.Domain\\Plantil.Domain.csproj"
             }
           }
         }

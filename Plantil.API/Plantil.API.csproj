@@ -5,6 +5,30 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="DbContexts\**" />
+    <Compile Remove="Entities\**" />
+    <Compile Remove="Migrations\**" />
+    <Compile Remove="Services\**" />
+    <Content Remove="DbContexts\**" />
+    <Content Remove="Entities\**" />
+    <Content Remove="Migrations\**" />
+    <Content Remove="Services\**" />
+    <EmbeddedResource Remove="DbContexts\**" />
+    <EmbeddedResource Remove="Entities\**" />
+    <EmbeddedResource Remove="Migrations\**" />
+    <EmbeddedResource Remove="Services\**" />
+    <None Remove="DbContexts\**" />
+    <None Remove="Entities\**" />
+    <None Remove="Migrations\**" />
+    <None Remove="Services\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Controllers\ExperimentsController.cs" />
+    <Compile Remove="Controllers\PlantsController.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="7.0.0" />
     <PackageReference Include="Microsoft.AspNetCore.JsonPatch" Version="3.1.5" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="3.1.5" />
@@ -18,6 +42,12 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Plantil.Core\Plantil.Core.csproj" />
+    <ProjectReference Include="..\Plantil.Data\Plantil.Data.csproj" />
+    <ProjectReference Include="..\Plantil.Domain\Plantil.Domain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Controllers\" />
   </ItemGroup>
 
 

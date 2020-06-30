@@ -6,4 +6,7 @@ D:\projects\Plantil\Plantil.Data\obj\Debug\netstandard2.0\Plantil.Data.AssemblyI
 D:\projects\Plantil\Plantil.Data\obj\Debug\netstandard2.0\Plantil.Data.AssemblyInfo.cs
 D:\projects\Plantil\Plantil.Data\obj\Debug\netstandard2.0\Plantil.Data.dll
 D:\projects\Plantil\Plantil.Data\obj\Debug\netstandard2.0\Plantil.Data.pdb
+D:\projects\Plantil\Plantil.Data\bin\Debug\netstandard2.0\Plantil.Domain.dll
+D:\projects\Plantil\Plantil.Data\bin\Debug\netstandard2.0\Plantil.Domain.pdb
+D:\projects\Plantil\Plantil.Data\obj\Debug\netstandard2.0\Plantil.Data.csproj.CopyComplete
 D:\projects\Plantil\Plantil.Data\obj\Debug\netstandard2.0\Plantil.Data.csproj.CoreCompileInputs.cache

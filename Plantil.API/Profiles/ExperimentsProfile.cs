@@ -1,9 +1,6 @@
 ﻿using AutoMapper;
 using Plantil.Core;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using Plantil.Domain.Entities;
 
 namespace Plantil.API.Profiles
 {
@@ -11,9 +8,9 @@ namespace Plantil.API.Profiles
     {
         public ExperimentsProfile()
         {
-            CreateMap<Entities.Experiment, ExperimentDto>();
-            CreateMap<ExperimentForCreateDto, Entities.Experiment>();
-            CreateMap<ExperimentForUpdateDto, Entities.Experiment>().ReverseMap();
+            CreateMap<Experiment, ExperimentDto>();
+            CreateMap<ExperimentForCreateDto, Experiment>();
+            CreateMap<ExperimentForUpdateDto, Experiment>().ReverseMap();
         }
     }
 }

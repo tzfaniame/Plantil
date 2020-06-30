@@ -31,6 +31,8 @@
           "Microsoft.EntityFrameworkCore.SqlServer": "3.1.5",
           "Microsoft.EntityFrameworkCore.Tools": "3.1.5",
           "Plantil.Core": "1.0.0",
+          "Plantil.Data": "1.0.0",
+          "Plantil.Domain": "1.0.0",
           "Microsoft.AspNetCore.Antiforgery": "3.1.0.0",
           "Microsoft.AspNetCore.Authentication.Abstractions": "3.1.0.0",
           "Microsoft.AspNetCore.Authentication.Cookies": "3.1.0.0",
@@ -1309,6 +1311,26 @@
         },
         "compile": {
           "Plantil.Core.dll": {}
+        }
+      },
+      "Plantil.Data/1.0.0": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.SqlServer": "3.1.5",
+          "Plantil.Domain": "1.0.0"
+        },
+        "runtime": {
+          "Plantil.Data.dll": {}
+        },
+        "compile": {
+          "Plantil.Data.dll": {}
+        }
+      },
+      "Plantil.Domain/1.0.0": {
+        "runtime": {
+          "Plantil.Domain.dll": {}
+        },
+        "compile": {
+          "Plantil.Domain.dll": {}
         }
       },
       "Microsoft.AspNetCore.Antiforgery/3.1.0.0": {
@@ -3592,6 +3614,16 @@
       "hashPath": "system.xml.xmlserializer.4.3.0.nupkg.sha512"
     },
     "Plantil.Core/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Plantil.Data/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Plantil.Domain/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

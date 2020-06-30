@@ -118,3 +118,7 @@ D:\projects\Plantil\Plantil.API\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Mvc
 D:\projects\Plantil\Plantil.API\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll
 D:\projects\Plantil\Plantil.API\obj\Debug\netcoreapp3.1\Plantil.API.csproj.CoreCompileInputs.cache
 D:\projects\Plantil\Plantil.API\obj\Debug\netcoreapp3.1\Plantil.API.MvcApplicationPartsAssemblyInfo.cache
+D:\projects\Plantil\Plantil.API\bin\Debug\netcoreapp3.1\Plantil.Data.dll
+D:\projects\Plantil\Plantil.API\bin\Debug\netcoreapp3.1\Plantil.Domain.dll
+D:\projects\Plantil\Plantil.API\bin\Debug\netcoreapp3.1\Plantil.Data.pdb
+D:\projects\Plantil\Plantil.API\bin\Debug\netcoreapp3.1\Plantil.Domain.pdb

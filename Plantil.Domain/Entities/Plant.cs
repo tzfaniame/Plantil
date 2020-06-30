@@ -8,6 +8,7 @@ namespace Plantil.Domain.Entities
     {
         public Plant()
         {
+            GrowthRecommends = new List<GrowthRecommend>();
             Experiments = new List<Experiment>();
         }
 
@@ -16,6 +17,8 @@ namespace Plantil.Domain.Entities
         public DateTime PlantingDate { get; set; }
         public MultiplicationType Multiplication { get; set; }
         public Taxonomy Taxonomy { get; set; }
+        public ICollection<GrowthRecommend> GrowthRecommends { get; set; }
         public ICollection<Experiment> Experiments { get; set; }
+        public Planter Planter { get; set; }
     }
 }
